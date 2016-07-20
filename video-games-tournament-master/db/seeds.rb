@@ -8,13 +8,20 @@
 
 
 
-tournamentA = Tournament.create(name: "Wimbledon")
-tournamentB = Tournament.create(name: "French Open")
-tournamentC = Tournament.create(name: "US Open")
-tournamentD = Tournament.create(name: "Australian Open")
+tournamentA = Tournament.create!(name: "Wimbledon")
+tournamentB = Tournament.create!(name: "French Open")
+tournamentC = Tournament.create!(name: "US Open")
+tournamentD = Tournament.create!(name: "Australian Open")
 
 
-playerA = Player.create(name: "John McCanroe")
-playerB = Player.create(name: "Jimmy Conners")
-playerC = Player.create(name: "Martina Hingus")
-playerD = Player.create(name: "Pete Sampras")
+playerA = Player.create!(name: "John McCanroe")
+playerB = Player.create!(name: "Jimmy Conners")
+playerC = Player.create!(name: "Martina Hingus")
+playerD = Player.create!(name: "Pete Sampras")
+
+
+tournamentA.players.push( playerA )
+tournamentA.players.push( playerB )
+
+tournamentB.players.push( playerC )
+tournamentB.players.push( playerD )
