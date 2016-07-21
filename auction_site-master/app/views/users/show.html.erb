@@ -1,0 +1,27 @@
+<h2> User profile </h2>
+
+<ul>
+  <li>
+    Name:
+    <strong> <%= @the_user.name %> </strong>
+  </li>
+
+  <li>
+    Email:
+    <strong> <%= @the_user.email %> </strong>
+  </li>
+</ul>
+
+<nav>
+  <div>
+    <a href="<%= user_products_path(@the_user) %>">
+      See this user's products
+    </a>
+  </div>
+
+  <div>
+    <a href="<%= new_user_product_path(@the_user) %>">
+      Add a product for this user
+    </a>
+  </div>
+</nav>
